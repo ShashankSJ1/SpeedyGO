@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Add lib') {
+            steps {
+                script {
+                    // Build the Spring Boot application using Maven
+                    sh """
+                        cd /var/lib/jenkins/workspace/ContactService/ContactService
+                        mvn clean install
+                    """
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run unit tests using Maven
+                    sh """
+                        cd /var/lib/jenkins/workspace/ContactService/ContactService
+                        mvn test
+                    """
+
+                }
+            }
+        }
+
+        stage('Package') {
+            steps {
+                script {
+                    // Package the application (JAR or WAR)
+                    sh """
+                        cd /var/lib/jenkins/workspace/ContactService/ContactService
+                        mvn package
+                    """
+
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh """
+                        cd /var/lib/jenkins/workspace/ContactService/ContactService
+                        docker build -t ContactService .
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up workspace
+            cleanWs()
+        }
+        success {
+            echo 'Build and deployment succeeded!'
+        }
+        failure {
+            echo 'Build or deployment failed.'
+        }
+    }
+}

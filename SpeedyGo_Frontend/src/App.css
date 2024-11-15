@@ -1,0 +1,15 @@
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+}

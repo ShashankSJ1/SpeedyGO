@@ -1,0 +1,30 @@
+
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .splash-video {
+    width: 40%;
+    height: 40%;          
+    object-fit: cover;
+    border: none;
+
+  }
+  
+@media screen and (max-width: 768px) {
+  .splash-video {
+    width: 100%;
+    height: 80%;
+  }
+}

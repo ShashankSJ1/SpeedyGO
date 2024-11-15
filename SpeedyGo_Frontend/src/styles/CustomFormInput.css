@@ -1,0 +1,39 @@
+.custom-form-input {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-input,
+.custom-select,
+.custom-textarea,
+.custom-element {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-input:focus,
+.custom-select:focus,
+.custom-textarea:focus,
+.custom-element:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.custom-input:hover,
+.custom-select:hover,
+.custom-textarea:hover,
+.custom-element:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,159 @@
+/* Styling for the container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.app-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Styling for the input container */
+.mapinput-container {
+  display: flex; /* Use flex to align input and map side by side */
+  flex-direction: row; /* Default to row direction */
+}
+
+/* Input fields wrapper */
+.input-fields {
+  flex: 1; /* Takes 1 part of the space */
+  margin-right: 20px; /* Space between input and map */
+}
+
+/* Input box styling */
+.input-box {
+  padding: 10px;
+  margin: 0 0 10px; /* Space between input boxes */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Full width */
+}
+
+/* Button styling */
+.calculate-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Full width */
+}
+
+.calculate-button:hover {
+  background-color: #218838;
+}
+
+.map-container {
+  flex: 1.5; 
+  height: 400px; 
+  border-radius: 8px;
+  background-color: lightgray; 
+}
+
+/* Distance display styling */
+.distance-display {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.date-time-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-time-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-time-picker .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.custom-datepicker,
+.custom-timepicker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.custom-datepicker:focus,
+.custom-timepicker:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.searchrider-button{
+  display: flex;
+  gap: 10px;
+}
+
+.date-picker,
+.time-picker {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1.5px solid black;
+}
+
+.date-time-picker{
+  margin-top: 20px;
+}
+
+@media (max-width: 986px) {
+  .mapinput-container {
+    flex-direction: column-reverse; /* Stack input and map vertically */
+  }
+
+  .input-fields {
+    width: 100%;
+  }
+
+  .map-container {
+    min-height: 300px; /* Ensure minimum height */
+    width: 90%;
+    margin: 0 auto;
+  }
+  .date-time-picker {
+    display: flex;
+    flex-direction:column ;
+    margin-top: 20px;
+  }
+
+  .date-time-picker button {
+    margin-top: 0;
+  }
+
+  .date-picker,
+  .time-picker {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+  }
+}

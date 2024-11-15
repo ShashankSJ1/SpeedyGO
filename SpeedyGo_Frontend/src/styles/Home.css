@@ -1,0 +1,223 @@
+/* Styles for HomePage */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: white; /* Default background color for light mode */
+    color: black; /* Default text color for light mode */
+}
+
+.homepage-container.dark {
+    background-color: black; /* Black background in dark mode */
+    color: white; /* White text in dark mode */
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Kanit", sans-serif;
+}
+p{
+    font-family: Bahnschrift;
+ }
+
+/* Toggle Button Styles */
+.toggle-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 20px; 
+    margin-top: 2rem;
+}
+
+.theme-toggle-button {
+    padding: 10px 20px;
+    color: white; /* Default button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black; /* Default background for button */
+}
+
+.theme-toggle-button.dark {
+    color: black; /* Black text in dark mode */
+    background-color: white; /* White background in dark mode */
+}
+
+/* Explore Section Styles */
+.homepage-exploresection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2.3rem;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.explore-button {
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explore-button:hover {
+    background-color: greenyellow;
+}
+
+.exploreimg {
+    width: 100%;
+}
+
+/* Services Section Styles */
+.homepage-servicesection {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease;
+    background-color: #F8F6F3; /* Light mode background color */
+}
+
+.homepage-container.dark .service-card {
+    background-color: transparent; /* Remove background in dark mode */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.service-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.service-card p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Odd-Even Cards Section */
+.even-odd-cards {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: none;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s ease;
+}
+
+.homepage-container.dark .card.even,
+.homepage-container.dark .card.odd {
+    background-color: transparent; /* Remove background in dark mode */
+}
+
+.card.even {
+    flex-direction: row-reverse;
+}
+
+.card.odd {
+    flex-direction: row;
+}
+
+/* Explicitly setting text color to white in dark mode for even-odd cards */
+.homepage-container.dark .even-odd-cards .card h2,
+.homepage-container.dark .even-odd-cards .card p {
+    color: white; /* Set text color to white for dark mode */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .homepage-exploresection {
+        flex-direction: column-reverse; 
+        align-items: center;
+    }
+
+    .text-section, .image-section {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .explorebutton-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Update styles for service cards */
+    .homepage-servicesection {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card.even {
+        display: flex !important;
+        flex-direction: column !important;
+        background-color: #F8F6F3;
+    }
+
+    .card.odd {
+        display: flex;
+        flex-direction: column;
+        background-color: #F8F6F3;
+    }
+}

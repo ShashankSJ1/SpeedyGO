@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Add lib') {
+            steps {
+                script {
+                    // Install dependencies for the React app
+                    sh """
+                        cd /var/lib/jenkins/workspace/speedygo/SpeedyGo_Frontend
+                        npm install --force
+                    """
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run tests (if applicable) in the React app
+                    sh """
+                        cd /var/lib/jenkins/workspace/speedygo/SpeedyGo_Frontend
+                        npm test -- --watchAll=false
+                    """
+                }
+            }
+        }
+
+        stage('Build React App') {
+            steps {
+                script {
+                    // Build the React app for production
+                    sh """
+                        cd /var/lib/jenkins/workspace/speedygo/SpeedyGo_Frontend
+                        npm run build
+                    """
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image for the React app
+                    sh """
+                        cd /var/lib/jenkins/workspace/speedygo/SpeedyGo_Frontend
+                        docker build -t speedygo-frontend .
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up workspace after build
+            cleanWs()
+        }
+        success {
+            echo 'Build and deployment succeeded!'
+        }
+        failure {
+            echo 'Build or deployment failed.'
+        }
+    }
+}

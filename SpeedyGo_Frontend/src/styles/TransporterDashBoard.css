@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex; 
+  min-height: 100vh;
+  flex-direction: row; 
+  height: auto;
+}
+
+.sidebar {
+  background-color: #f2f2f2; 
+  padding: 20px; 
+  width: 250px; 
+  min-height: 100vh;
+  transition: width 0.3s;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0; 
+}
+
+.button-group {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.sidebar-button {
+  background-color: black; 
+  color: white; 
+  border: none;
+  border-radius: 5px; 
+  padding: 10px; 
+  margin: 10px 0; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-button:hover {
+  background-color: dimgray; 
+}
+
+.sidebar-button .icon {
+  margin-left: 8px; 
+  color: white; 
+}
+
+.content {
+  flex: 1; 
+  padding: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 600px; 
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.availability-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.availability-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(52px); /* Adjusted to match the new width */
+}
+
+.pricing-info{
+  margin-top: 10px;
+}
+.pricing-info p{
+  font-weight: bold;
+}
+.pricing-info span{
+  font-weight: 500;
+}
+
+.check-icon{
+  color: green;
+  margin-left: 20px;
+}
+/* styles.css */
+.custom-margin-bottom {
+  margin-bottom: 20px !important; /* Use !important to override other styles */
+}
+
+@media (max-width: 1024px) { 
+  .dashboard-container {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .sidebar {
+    width: 100%; 
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .content {
+    padding: 10px; 
+  }
+
+  .sidebar-button {
+    padding: 8px; 
+    margin: 8px 0; 
+  }
+  .pricing-info{
+    display: flex !important;
+    flex-direction: column !important; 
+    justify-content: center !important;
+    align-items: center;
+  }
+}
+.accept-cancel {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-icon {
+  color: #28a745;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.check-icon:hover {
+  transform: scale(1.2);
+  color: #218838;
+}
+
+.cancel-icon {
+  color: #dc3545;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cancel-icon:hover {
+  transform: scale(1.2);
+  color: #c82333;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-icon, .cancel-icon {
+  background-color: #F8F6F3; /* Background color for the circle */
+  border-radius: 50%; /* Makes the icon circular */
+  padding: 5px; /* Space around the icon */
+  margin: 0 5px; /* Space between icons */
+  font-size: 25px; /* Size of the icon */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.check-icon:hover {
+  background-color: #e0f7e0; /* Light green on hover */
+}
+
+.cancel-icon:hover {
+  background-color: #f8d7da; /* Light red on hover */
+}
+
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 10px; 
+  }
+
+  .sidebar-button {
+    padding: 6px; 
+    margin: 6px 0;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px; 
+  }
+
+  .content {
+    padding: 10px;
+  }
+  .pricing-info{
+    display: flex !important;
+    flex-direction: column !important; 
+    justify-content: center !important;
+    align-items: center;
+  }
+}

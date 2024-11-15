@@ -1,0 +1,270 @@
+.transporter-details {
+    display: flex;
+    padding: 10px 10px;
+}
+
+.filter-container {
+    flex: 2;
+    min-height: 100vh;
+    transition: transform 0.3s ease;
+}
+
+.filter-toggle {
+    display: none; 
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Content area */
+.transporter-contents {
+    flex: 5;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.searchbar-container {
+    flex: 5;
+    margin-left: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switch-view{
+    flex: 1.5;
+}
+.transporter-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transporter-search-container{
+    flex:3;
+}
+
+.Switch-table-view{
+    flex: 1;
+}
+
+.customcard-maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-img {
+    width: 6%;
+    height: 50px;
+    aspect-ratio: 3/4;
+    mix-blend-mode: darken;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.pagination-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.transporter-table-container {
+    width: 100%;
+    overflow-x: auto; /* Ensures horizontal scrolling for the table */
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Optional: Add max-height to limit vertical size if needed */
+    /* max-height: 400px; */
+}
+
+.transporter-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    table-layout: auto; 
+}
+
+.transporter-table th, .transporter-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping within table cells */
+}
+
+.transporter-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.TransporterTableView-table-responsive {
+    overflow-x: auto;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.TransporterTableView-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.TransporterTableView-table th,
+.TransporterTableView-table td {
+    padding: 0.75rem;
+    text-align: center; /* Center text horizontally */
+    vertical-align: middle; /* Center content vertically */
+    border-top: 1px solid #dee2e6;
+}
+
+
+.TransporterTableView-btn:hover {
+    background-color: #0056b3;
+}
+
+.TransporterTableView-pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.TransporterTableView-pagination-item {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.TransporterTableView-pagination-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.TransporterTableView-customcard-maincontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.TransporterTableView-container {
+    padding: 20px;
+}
+
+.TransporterTableView-details {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.TransporterTableView-search-container {
+    margin-bottom: 20px;
+}
+
+.TransporterTableView-Switch-table-view {
+    margin-left: 10px;
+}
+
+.close-icon{
+    display: none;
+}
+
+.request-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: green;
+}
+@media screen and (max-width: 768px) {
+    .transporter-details {
+        display: flex;
+        flex-direction: column;
+    }
+    .close-icon {
+        display: block;
+        float: right;
+        z-index: 2000;
+    }
+    .filter-container {
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .show-filter {
+        transform: translateX(0);
+    }
+
+    .customcard-maincontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .hide-filter {
+        transform: translateX(-100%);
+    }
+
+    .filter-toggle {
+        display: block;
+    }
+
+    .menu-icon {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .transporter-contents {
+        width: 100%;
+        flex: none;
+        padding: 20px;
+    }
+
+    .filter-img {
+        width: 40%;
+        height: 50px;
+    }
+    .searchbar-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .transporter-table-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .transporter-table {
+        min-width: 700px; /* Ensure minimum width for scrolling on smaller screens */
+    }
+    .transporter-search{
+        display: flex;
+        flex-direction: column;
+    }
+    .transporter-search-container{
+        width: 100%;
+    }
+}

@@ -1,0 +1,143 @@
+.custom-transporter-card {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    background-color: #F8F6F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.25);
+}
+
+.image-container {
+    flex: 2;
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.card-img-top {
+    width: 70%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    font-family: monospace;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.card-text {
+    font-family: cursive;
+    color: black;
+    font-size: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.dynamic-props {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.dynamic-item {
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    word-break: break-word;
+    width: 100%;
+}
+
+.dynamic-heading {
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-right: 5px;
+}
+
+.dynamic-value {
+    font-weight: 400;
+    word-break: break-word;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 968px) {
+    .custom-transporter-card {
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .image-container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .dynamic-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dynamic-heading, .dynamic-value {
+        text-align: center;
+        word-break: break-word;
+        width: 100%;
+    }
+
+    .card-title, .card-text {
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+}

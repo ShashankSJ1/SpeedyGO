@@ -1,0 +1,227 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+.navbar-home {
+  background-color: #0f172a;
+  color: white;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-other {
+  background-color: #F8F6F3;
+  color: black;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.navbar-iconhome{
+  width: 100px;
+  height: 80px;
+  margin-left: 20px;
+}
+.navbar-icon {
+  width: 80px;
+  margin-left: 20px;
+}
+
+.navbar-menu {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.navbar-menu.menu-open {
+  display: flex;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  padding: 0.3rem;
+  margin: 0 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.nav-link:not(.active):hover {
+  background-color: #172554;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.nav-item:last-child {
+  margin-right: 20px;
+}
+
+.user-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  background-color: #42c8b7;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style for user info hover box */
+.user-info {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-align: center;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+.user-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #000000;
+  /* Ensure the text is visible */
+}
+
+.user-info::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the menu and user icon to the right */
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .navbar-menu.menu-open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 0.2rem 0.5rem;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-left: 0;
+  }
+
+  /* User Icon displayed next to FaBars in mobile */
+  .user-icon-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Ensure that the user icon comes before FaBars */
+  .user-icon {
+    margin-right: 3rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Show the desktop user icon only in desktop view */
+@media (min-width: 969px) {
+  .desktop-only {
+    display: flex;
+  }
+
+  .user-icon-mobile {
+    display: none;
+  }
+}

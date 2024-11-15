@@ -1,0 +1,35 @@
+.custom-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0 auto; 
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.custom-button-container .custom-button {
+  background-color: black; 
+  padding: 8px 23px !important;
+  align-items: center; 
+  justify-content: center;
+  border-radius: 5px; 
+  display: flex;
+  border: none;
+  flex-direction: column;
+}
+
+.custom-button-text {
+  font-size: 15px; 
+  font-weight: bold; 
+  color: #ffffff; 
+  text-align: center; 
+}
+
+.custom-button:hover {
+  background-color: gray!important;
+  border: 1px solid white!important;
+}
+
+.custom-button:focus, .custom-button:active {
+  outline: none;
+  box-shadow: none;
+}

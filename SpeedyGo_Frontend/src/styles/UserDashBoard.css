@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box; /* Make box model consistent */
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Full height of the viewport */
+  flex-direction: row; /* Default to row direction for larger screens */
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f2f2f2; /* Light gray background for sidebar */
+  padding: 20px; /* Padding inside sidebar */
+  width: 250px; /* Fixed width for the sidebar */
+  transition: width 0.3s; /* Smooth transition for width change */
+}
+
+.sidebar h2 {
+  margin-top: 0; /* Remove top margin from the header */
+}
+
+/* Button styles */
+.button-group {
+  display: flex; /* Use flexbox to arrange buttons in a column */
+  flex-direction: column; /* Stack buttons vertically */
+}
+
+.sidebar-button {
+  background-color: black; /* Background color */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside buttons */
+  margin: 10px 0; /* Margin for spacing between buttons */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.sidebar-button:hover {
+  background-color: dimgray; /* Darker shade on hover */
+}
+
+/* Main content styles */
+.content {
+  flex: 1; /* Fill remaining space */
+  padding: 20px; /* Padding inside main content */
+}
+
+/* Table styles */
+table {
+  width: 100%; /* Full width for tables */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd; /* Border for table and cells */
+}
+
+th,
+td {
+  padding: 12px; /* Padding inside cells */
+  text-align: left; /* Align text to the left */
+}
+
+/* Header styles */
+th {
+  background-color: #f2f2f2; /* Header background color */
+}
+
+/* Cancel button styles */
+.cancel-button {
+  background-color: red; /* Red background for the Cancel button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Padding for the button */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.cancel-button:hover {
+  background-color: darkred; /* Darker shade on hover */
+}
+
+/* Status colors */
+.status {
+  padding: 5px; /* Padding for status cell */
+  border-radius: 5px; /* Rounded corners for status cell */
+  color: white; /* White text color */
+}
+
+.status.completed {
+  background-color: darkgreen; /* Background color for completed status text */
+  color: rgb(182, 237, 182); /* Ensure text color is visible on dark green */
+  text-align: center; /* Center align the text */
+}
+
+.status.accepted {
+  background-color: darkgreen; /* Background color for completed status text */
+  color: rgb(182, 237, 182); /* Ensure text color is visible on dark green */
+  text-align: center; /* Center align the text */
+}
+
+.status.pending {
+  background-color: orange; /* Background color for ongoing status text */
+  color: rgb(242, 238, 197); /* Ensure text color is visible */
+}
+
+.status.canceled{
+  background-color: red;
+  color: rgb(237, 169, 192);
+}
+
+/* styles.css */
+.custom-pagination {
+  margin-top: 20px;
+}
+
+.custom-pagination .page-item {
+  margin: 0 3px;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+  .dashboard-container {
+    flex-direction: column; /* Stack sidebar and main content */
+    height: auto; /* Remove full height on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width for sidebar */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .content {
+    padding: 10px; /* Adjust padding for main content */
+  }
+
+  .sidebar-button {
+    width: 80%;
+    margin: 0 auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding: 8px; /* Adjust button padding */
+  }
+}
+.pay-icon:hover {
+  background-color: #e0ffe0; /* Light green on hover */
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+  .sidebar {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .sidebar-button {
+    width: 80%;
+    margin: 0 auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding: 6px; /* Adjust button padding */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for table cells */
+  }
+
+  .content {
+    padding: 10px; /* Adjust padding for main content */
+  }
+}

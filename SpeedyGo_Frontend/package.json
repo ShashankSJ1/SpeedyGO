@@ -1,0 +1,79 @@
+{
+  "name": "capstone_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.8",
+    "@testing-library/user-event": "^13.5.0",
+    "@tomtom-international/web-sdk-maps": "^6.25.0",
+    "@tomtom-international/web-sdk-services": "^6.25.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-apexcharts": "^1.4.1",
+    "react-bootstrap": "^2.10.5",
+    "react-datepicker": "^7.4.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-leaflet": "^4.2.1",
+    "react-password-checklist": "^1.8.1",
+    "react-password-strength": "^2.4.0",
+    "react-password-strength-bar": "^0.4.1",
+    "react-range": "^1.10.0",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.1",
+    "react-spring": "^9.7.4",
+    "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
+    "scheduler": "^0.23.2",
+    "sweetalert2": "^11.14.3",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "coverage": "npm test -- --coverage --watchAll --collectCoverageFrom='src/**/*.{js,jsx}' --collectCoverageFrom='!src/index.js' --collectCoverageFrom='!src/App.js' --collectCoverageFrom='!src/pages/Transporter/**' --collectCoverageFrom='!src/pages/Users/**' --collectCoverageFrom='!src/Components/maps/MapComponent.jsx' --collectCoverageFrom='!src/Components/CustomTransporterDetailsCard.jsx' --collectCoverageFrom='!src/Components/Quotations.jsx' --collectCoverageFrom='!src/Components/TransporterDetails.jsx' --collectCoverageFrom='!src/Components/TransporterDetailsTableView.jsx' --collectCoverageFrom='!src/Components/TransporterFilter.jsx' --collectCoverageFrom='!src/pages/ForgotPassword.jsx' --collectCoverageFrom='!src/Components/Login/Login.jsx' --collectCoverageFrom='!src/Components/Login/Register.jsx' --collectCoverageFrom='!src/pages/Home.jsx' --collectCoverageFrom='!src/Components/ContactForm.jsx' --collectCoverageFrom='!src/SplashScreen.jsx'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/preset-react": "^7.25.7",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "babel-jest": "^29.7.0",
+    "jest": "^27.5.1",
+    "redux-mock-store": "^1.5.5"
+  }
+}
